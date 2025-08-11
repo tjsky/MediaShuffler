@@ -1,0 +1,32 @@
+# config.yaml
+bot:
+  token: "123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ" #bot_token
+  channel_id: -100123456789 # 频道ID
+  admin_ids: 
+    - 54321  # 管理员ID1
+    - 12345  # 管理员ID2
+  scan_dir:
+    win: "D:\\media\\content"
+    linux: "/media/content"
+  interval: 60    # 发送间隔（分钟）
+  daily_scan_time: "04:00"  # 每日数据库扫描时间
+  blacklist: # 扫描时排除特定文件名
+    - thumb
+    - __MACOSX
+    - thumbnail
+    - _Sent
+  text_schedules:
+    - name: "每日公告"
+      schedule: "day 12:00"
+      content: |
+        **【妹纸写真推送】**
+        ※本频道不搞什么转发才能获取全图，才能获取下载链接，获取内部群之类的骗流量模式。
+        ※不过还请大家看到满意的图片时多多转发啦
+        ※也欢迎大家投稿
+        ※这里换行=消息换行，支持粗体链接等基础markdown语法，发送markdown语法符号请使用\\做反转义。
+#    - name: "周报提醒"
+#      schedule: "week 5 15:17"  
+#      content: "**每周精选**\n请查收最新内容汇总"
+#    - name: "cron示例"
+#      schedule: "cron 1 12 * * *"  
+#      content: "本月新主题：\\#夏季特辑"
